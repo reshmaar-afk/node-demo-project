@@ -1,0 +1,13 @@
+name: CI (develop)
+
+on:
+  pull_request:
+    branches: [develop]
+  push:
+    branches: [develop]
+
+jobs:
+  call-reusable-ci:
+    uses: reshmaar-afk/devops-workflows/.github/workflows/ci.yml@main
+    with:
+      node-version: '20'
